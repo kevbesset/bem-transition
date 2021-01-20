@@ -1,14 +1,14 @@
 <script>
-import { h, Transition } from "vue";
+import { h, TransitionGroup } from "vue";
 
 export default {
-  name: "BemTransition",
+  name: "BemTransitionGroup",
   props: {
     name: { type: String },
   },
   render() {
     return h(
-      Transition,
+      TransitionGroup,
       {
         ...this.$attrs,
         name: this.name ? `${this.name}-` : this.name,
